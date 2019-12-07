@@ -3,13 +3,15 @@ import numpy as np
 import time
 from handGestureRecognition import handRecognition,resizeImage
 
+# this i a live video test. I run a while loop that runs my function for each frame that it receives
+# i also check the start and end times to calculate the number of iterations that is does per second
+
 startTime = time.time()
 cap = cv2.VideoCapture(0)
 
 i = 0
 while(cap.isOpened()):
     ret, frame = cap.read()
-    #frame is the current image in the video
     if ret == False:
         break
     # frame = resizeImage(frame)

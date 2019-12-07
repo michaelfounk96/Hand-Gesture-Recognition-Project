@@ -3,6 +3,8 @@ import numpy as np
 import os
 
 from handGestureRecognition import handRecognition,resizeImage
+# this is a batch file test that i run through all of the pictures i have in the images folder
+# the completed ones that i have are sorted into the ones that fail and the ones that succeed
 
 for filename in os.listdir('images'):
     if filename != "Failed" and filename != "Completed":

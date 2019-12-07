@@ -3,6 +3,8 @@ import numpy as np
 import time
 from handGestureRecognition import handRecognition,resizeImage
 
+# this is a video test. similar to the live video test except that the input is a premade video
+
 startTime = time.time()
 cap = cv2.VideoCapture("video/handVideo1.mp4")
 
