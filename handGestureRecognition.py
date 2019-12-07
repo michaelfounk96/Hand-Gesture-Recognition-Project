@@ -13,6 +13,7 @@ def distanceBetweenPoints(p1, p2):
 
 def handRecognition(img):
     # img = resizeImage(img)
+    #something new
     y, x, z = img.shape
     first_mask = np.zeros((x,y))
     first_mask = 1.05 < img[:,:,2] / img[:,:,1]
