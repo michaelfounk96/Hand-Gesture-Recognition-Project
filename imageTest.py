@@ -9,7 +9,6 @@ from handGestureRecognition import handRecognition,resizeImage
 for filename in os.listdir('images'):
     if filename != "Failed" and filename != "Completed":
         img = cv2.imread('images/' + filename)
-        img = resizeImage(img)
         output = handRecognition(img)
         newFileName = filename.split(".", 1)[0]
         print(newFileName)

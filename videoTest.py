@@ -14,11 +14,13 @@ while(cap.isOpened()):
     #frame is the current image in the video
     if ret == False:
         break
-    frame = resizeImage(frame)
+    # frame = resizeImage(frame)
     output = handRecognition(frame)
     i = i + 1
     print("Number of fingers: ", output[1])
-    cv2.imshow("output", output[0])
+    newOutput = resizeImage(output[0])
+    frame = resizeImage(frame)
+    cv2.imshow("output", newOutput)
     cv2.imshow("Original", frame)
 
     if cv2.waitKey(5) == ord('q'):
